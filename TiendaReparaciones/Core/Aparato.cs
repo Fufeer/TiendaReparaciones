@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TiendaReparaciones.Core
 {
-    abstract class Aparato
+    public abstract class Aparato
     {
         protected Aparato(int numSerie, string modelo, int precioH)
         {
