@@ -8,8 +8,8 @@ namespace TiendaReparaciones.Core.Reparaciones
     {
 
         //recibo un objeto aparato?
-        public SustitucionPiezas (double horas, Aparato aparato)
-            : base(horas, aparato)
+        public SustitucionPiezas (double horas, int precioHora, int numSerie)
+            : base(horas, precioHora, numSerie)
         {
 
         }

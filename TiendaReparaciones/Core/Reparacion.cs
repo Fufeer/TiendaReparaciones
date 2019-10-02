@@ -7,7 +7,7 @@ namespace TiendaReparaciones.Core
     using Core.Reparaciones;
     public abstract class Reparacion
     {
-        protected Reparacion(double horas, Aparato aparato)
+        protected Reparacion(double horas, int precioHora, int numSerie)
         {
             double aux = horas;
             while (aux > 0)
@@ -16,21 +16,21 @@ namespace TiendaReparaciones.Core
                 fragmentos++;
             }
             this.horas = horas;
-            precioHora = aparato.precioHora;
-            numSerie = aparato.numSerie;
+            this.precioHora = precioHora;
+            this.numSerie = numSerie;
         }
 
-        public static Reparacion Crea(double horas, Aparato aparato)
+        public static Reparacion Crea(double horas, int precioHora, int numSerie)
         {
             Reparacion toret = null;
 
             if (horas <= 1)
             {
-                toret = new SustitucionPiezas(horas, aparato);
+                toret = new SustitucionPiezas(horas, precioHora, numSerie);
             }
             else
             {
-                toret = new ReparacionCompleja(horas,aparato);
+                toret = new ReparacionCompleja(horas, precioHora, numSerie);
             }
 
             return toret;

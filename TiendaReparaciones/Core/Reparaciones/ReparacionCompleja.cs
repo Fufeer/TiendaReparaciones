@@ -7,8 +7,8 @@ namespace TiendaReparaciones.Core.Reparaciones
     class ReparacionCompleja : Reparacion
     {
         //recibo un objeto aparato?
-        public ReparacionCompleja(double horas, Aparato aparato)
-            : base(horas, aparato)
+        public ReparacionCompleja(double horas, int precioHora, int numSerie)
+            : base(horas, precioHora, numSerie)
         {
 
         }
