@@ -4,7 +4,7 @@ using System.Text;
 
 namespace TiendaReparaciones.Core
 {
-    class Televisor : Aparato
+    public class Televisor : Aparato
     {
         public const int precioH = 10;
 

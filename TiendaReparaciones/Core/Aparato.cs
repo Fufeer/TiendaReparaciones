@@ -6,11 +6,11 @@ namespace TiendaReparaciones.Core
 {
     public abstract class Aparato
     {
-        protected Aparato(int numSerie, string modelo, int precioH)
+        protected Aparato(int numSerie, string modelo, int precioHora)
         {
             this.numSerie = numSerie;
             this.modelo = modelo;
-            this.precioH = precioH;
+            this.precioHora = precioHora;
         }
 
         public int numSerie
@@ -23,14 +23,14 @@ namespace TiendaReparaciones.Core
             get; set;
         }
 
-        public int precioH
+        public virtual int precioHora
         {
             get; set;
         }
 
         public override string ToString()
         {
-            return "RADIO\nNum Serie: " + numSerie + "\nModelo: " + modelo + "\nPrecio por hora: " + precioH;
+            return "RADIO\nNum Serie: " + numSerie + "\nModelo: " + modelo + "\nPrecio por hora: " + precioHora;
         }
 
         //CREAR LUEGO

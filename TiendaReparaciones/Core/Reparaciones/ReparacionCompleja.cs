@@ -4,11 +4,10 @@ using System.Text;
 
 namespace TiendaReparaciones.Core.Reparaciones
 {
-    class SustitucionPiezas : Reparacion
+    class ReparacionCompleja : Reparacion
     {
-
         //recibo un objeto aparato?
-        public SustitucionPiezas (double horas, Aparato aparato)
+        public ReparacionCompleja(double horas, Aparato aparato)
             : base(horas, aparato)
         {
 
@@ -16,12 +15,12 @@ namespace TiendaReparaciones.Core.Reparaciones
 
         public override double calcularPrecio(int precioPiezas)
         {
-            return base.calcularPrecio(precioPiezas) + precioHora/2*fragmentos;
+            return base.calcularPrecio(precioPiezas) + precioHora / 2 * fragmentos * 1.25;
         }
 
         public override string ToString()
         {
-            return "Sustitucion de piezas.\n" + base.ToString();
+            return "Reparacion compleja.\n" + base.ToString();
         }
     }
 }

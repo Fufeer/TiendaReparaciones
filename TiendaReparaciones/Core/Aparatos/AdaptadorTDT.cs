@@ -21,7 +21,7 @@ namespace TiendaReparaciones.Core
 
         public override string ToString()
         {
-            return "ADAPTADOR TDT\n" + base.ToString() + "\Tiempo que graba: " + tiempo;
+            return "ADAPTADOR TDT\n" + base.ToString() + "\nTiempo que graba: " + tiempo;
         }
     }
 }
